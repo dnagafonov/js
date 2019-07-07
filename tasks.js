@@ -19,9 +19,9 @@ function t9 (v,k) {
 }
 console.log(t9(v,3));
 
-var с = 10.1929999;
+var c = 12.1929999;
 function t1_2 (c,k) {
-  let c1 = Number(String(с).split('.')[1] || 0);
+  let c1 = Number(String(c).split('.')[1] || 0);
   let c2 = c1.toString().split('');
   let counter = 0;
   for (var i = 0; i != k; i++) {
@@ -31,11 +31,11 @@ function t1_2 (c,k) {
   }
   return counter;
 }
-console.log(t1_2(с,4));
+console.log(t1_2(c,4));
 
-var с = 10.12999;
+var c = 12.21345;
 function t2_2 (c,k) {
-  let c1 = Number(String(с).split('.')[1] || 0);
+  let c1 = Number(String(c).split('.')[1] || 0);
   let c2 = c1.toString().split('');
   let temp = 0;
   for (var i = 0; i != k; i++) {
@@ -43,10 +43,10 @@ function t2_2 (c,k) {
   }
   return temp;
 }
-console.log(t2_2(с,3));
+console.log(t2_2(c,3));
 
-function t2_2 (c,k,n) {
-  let c1 = Number(String(с).split('.')[1] || 0);
+function t3_2 (c,k,n) {
+  let c1 = Number(String(c).split('.')[1] || 0);
   let c2 = c1.toString().split('');
   let temp1 = 0;
   let temp2 = 0;
@@ -58,6 +58,51 @@ function t2_2 (c,k,n) {
   }  
   return temp1 == temp2;
 }
-//console.log(t2_2(с,3,3));
+console.log(t3_2(c,3,3));
 
+function t4_2 (c,k,n) {
+  let c1 = Number(String(c).split('.')[1] || 0);
+  let c2 = c1.toString().split('');
+  let temp2 = 0;
+  for (var i = k; i != k+n; i++) {
+  		temp2 += Number(c2[i]);
+  }  
+  return c2[k] == temp2;
+}
+console.log(t4_2(c,2,1));
+
+function t5_2 (c,k,n) {
+  let c1 = Number(String(c).split('.')[1] || 0);
+  let c2 = c1.toString().split('');
+  let temp2 = 0;
+  for (var i = 0; i != n; i++) {
+  		temp2 += Number(c2[i]);
+  }  
+  return c2[k] == temp2;
+}
+console.log(t5_2(c,3,2));
+
+function t6_2 (c,k,n) {
+  let c1 = Number(String(c).split('.')[1] || 0);
+  let c2 = c1.toString().split('');
+  let temp2 = 0;
+  for (var i = n+1; i != n+k+1; i++) {
+  		temp2 += Number(c2[i]);
+  }
+  return temp2;
+}
+console.log(t6_2(c,2,1));
+
+function t7_2 (c,k) {
+  let c1 = Number(String(c).split('.')[1] || 0);
+  let c2 = c1.toString().split('');
+  let temp1 = 0;
+  let temp2 = 0;
+  for (var i = 0; i != k; i++) {
+  		temp2 += Number(c2[i]);
+  }  
+  String(Math.trunc(c)).split('').map(function(i){temp1 += Number(i);})
+  return temp1 == temp2;
+}
+console.log(t7_2(c,2));
 
