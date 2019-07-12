@@ -19,7 +19,7 @@ function t9 (v,k) {
 }
 console.log(t9(v,3));
 
-var c = 12.1929999;
+var c = 12.1299999;
 function t1_2 (c,k) {
   let c1 = Number(String(c).split('.')[1] || 0);
   let c2 = c1.toString().split('');
@@ -33,7 +33,6 @@ function t1_2 (c,k) {
 }
 console.log(t1_2(c,4));
 
-var c = 12.21345;
 function t2_2 (c,k) {
   let c1 = Number(String(c).split('.')[1] || 0);
   let c2 = c1.toString().split('');
@@ -106,3 +105,74 @@ function t7_2 (c,k) {
 }
 console.log(t7_2(c,2));
 
+
+var n = 123456789
+function t1_1 (n){
+	let temp = 0;
+	n.toString().split('');
+		for(let i = 0; i != n.length; ++i){
+			for(let j = i+1; i != n.length; ++j){
+				if(Number(n[i]) === Number(n[j])){
+					temp++;
+				}
+			}
+		}
+	if(temp == 1){
+		return true;		
+	}
+	return false;
+}
+console.log(t1_1(n));
+
+function t2_1 (n){
+	let temp = 0;
+	n.toString().split('');
+		for(let i = 0; i != n.length; ++i){
+			for(let j = i+1; i != n.length; ++j){
+				if(Number(n[i]) === Number(n[j])){
+					temp++;
+				}
+			}
+		}
+	if(temp == 2){
+		return true;		
+	}
+	return false;
+}
+console.log(t2_1(n));
+
+function polindrome (n) {
+  return n == n.toString().split('').reverse().join('');
+}
+console.log(polindrome(n));
+
+function t4_1 (n){
+	let temp = 0;
+	n.toString().split('');
+	for(var i = 0; i!=n.length; ++i){ 
+		for(var j = i+1; j!=n.length; ++j){ 
+			if(Number(n[i]) === Number(n[j])){ 
+				return false; 
+			} 
+		} 
+	}
+	return true;
+}
+console.log(t4_1(n));
+
+function t5_1 (n,k){
+	let temp = 0;
+	n.toString().split('');
+		for(let i = 0; i != n.length; ++i){
+			for(let j = i+1; i != n.length; ++j){
+				if(Number(n[i]) === Number(n[j])){
+					temp++;
+				}
+			}
+		}
+	if(temp == k){
+		return true;		
+	}
+	return false;
+}
+console.log(t5_1(n,2));
